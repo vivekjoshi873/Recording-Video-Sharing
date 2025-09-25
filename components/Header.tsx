@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import userimage from "../public/assets/images/dummy.jpg";
 import Link from "next/link";
 import upload from "../public/assets/icons/upload.svg";
 import record from "../public/assets/icons/record.svg"
@@ -12,7 +11,7 @@ const Header = ({ subHeader, title, userImg }: SharedHeaderProps) => {
         <div className="details">
           {userImg && (
             <Image
-              src={userImg || userimage}
+              src={userImg }
               alt="user"
               width={66}
               height={66}
@@ -31,7 +30,7 @@ const Header = ({ subHeader, title, userImg }: SharedHeaderProps) => {
           </Link>
           <div className="record">
             <button className="primary-btn">
-              <Image src={record} alt="record " width={16} height={16} />
+              <Image src={record} alt="record" width={16} height={16} />
               <span>Record a video</span>
             </button>
           </div>
@@ -45,7 +44,7 @@ const Header = ({ subHeader, title, userImg }: SharedHeaderProps) => {
           />
           <Image src={search} alt="search" width={16} height={16}/>
         </div>
-
+          {`<DrowndownList/>`}
       </section>
     </header>
   );
