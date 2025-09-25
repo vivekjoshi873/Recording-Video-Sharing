@@ -3,13 +3,12 @@ import Link from "next/link";
 import React from "react";
 import logo from "../public/assets/icons/logo.svg";
 import dummy from "../public/assets/images/dummy.jpg";
-import logout from "../public/assets/icons/logo.svg";
+import logout from "../public/assets/icons/logout.svg";
 const user = {};
 const Navbar = () => {
   return (
-    <header>
+    <header className="navbar">
       <nav>
-        <h1 className="text-2xl">Navbar</h1>
         <Link href="/">
           <Image src={logo} alt="logo" width={32} height={32} />
         </Link>
@@ -25,7 +24,7 @@ const Navbar = () => {
               />
             </button>
             <button className="cursor-pointer ">
-              <Image src={logout} alt="logout" width={24} height={24} />
+              <Image src={logout} alt="logout" width={24} height={24} className="rotate-180" />
             </button>
           </figure>
         )}
